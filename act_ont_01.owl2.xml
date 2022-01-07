@@ -1,0 +1,1030 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#"
+     xml:base="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:act_ont_01="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasEvent -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasEvent">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasEndTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasEndTime">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasStartTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasStartTime">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Event"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#BackPack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#BackPack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Bathroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Bathroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Bedroom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Bedroom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#BoilingWater -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#BoilingWater">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#BrushingTeeth -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#BrushingTeeth">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#MakingCoffee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Cabinet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Cabinet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#CoffeeBeans -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#CoffeeBeans">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#CoffeeMachine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#CoffeeMachine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ComputerDesk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ComputerDesk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#DishRack -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#DishRack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#DishWasher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#DishWasher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#FoodContainer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#FoodContainer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#HandGesture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#HandGesture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Kettle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Kettle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Kitchen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Kitchen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#LivingRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#LivingRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Location"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Location -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Location"/>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Lying -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Lying">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Posture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#MakingCoffee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#MakingCoffee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Mug -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Mug">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#NotMakingCoffee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#NotMakingCoffee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Posture -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Posture">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Refrigerator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Refrigerator">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ShakingFRL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ShakingFRL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#HandGesture"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ShakingURL"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ShakingURL -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ShakingURL">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#HandGesture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Sitting -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Sitting">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Posture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Standing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Standing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Posture"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Stove -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Stove">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ToothBrush -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ToothBrush">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#WaterBottle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#WaterBottle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#WaterFaucet -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#WaterFaucet">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#activity_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#activity_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#shaking_url"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#tooth_brush_01"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#activity_02_b -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#activity_02_b">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#BoilingWater"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#kettle_01_cf"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#stove_01_cf"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#water_faucet_01_b"/>
+        <hasEndTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</hasEndTime>
+        <hasStartTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasStartTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#activity_03_cf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#activity_03_cf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#coffee_machine_01_cf"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#mug_01_cf"/>
+        <hasEndTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</hasEndTime>
+        <hasStartTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</hasStartTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#activity_04_ncf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#activity_04_ncf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#coffee_machine_02_ncf"/>
+        <hasEvent rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#mug_01_ncf"/>
+        <hasEndTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</hasEndTime>
+        <hasStartTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</hasStartTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#bathroom_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#bathroom_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Bathroom"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#coffee_machine_01_cf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#coffee_machine_01_cf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#CoffeeMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#coffee_machine_02_ncf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#coffee_machine_02_ncf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#CoffeeMachine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#kettle_01_cf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#kettle_01_cf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Kettle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#kettle_02_ncf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#kettle_02_ncf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Kettle"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#mug_01_cf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#mug_01_cf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Mug"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#mug_01_ncf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#mug_01_ncf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Mug"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#shaking_url -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#shaking_url">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ShakingURL"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#standing_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#standing_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Standing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#stove_01_cf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#stove_01_cf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Stove"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#tooth_brush_01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#tooth_brush_01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ToothBrush"/>
+        <hasEndTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</hasEndTime>
+        <hasStartTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hasStartTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#water_faucet_01_b -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#water_faucet_01_b">
+        <rdf:type rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#WaterFaucet"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#BackPack"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Cabinet"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#CoffeeBeans"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#CoffeeMachine"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ComputerDesk"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#DishRack"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#DishWasher"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#FoodContainer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Mug"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Refrigerator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#WaterBottle"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Bathroom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Bedroom"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Kitchen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#LivingRoom"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#HandGesture"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Objects"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Posture"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Lying"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Sitting"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Standing"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#a0">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t0e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#ts">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#dt">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#e_coff_m">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#e_mug">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#e_ket">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#e_wat_fc">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#e_st">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#e_sh">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#t2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#duration">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#BoilingWater"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#a0"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasEndTime"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#a0"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#t0e"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasStartTime"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#ts"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
+                                                        <swrl:arguments rdf:parseType="Collection">
+                                                            <rdf:Description rdf:about="urn:swrl:var#dt"/>
+                                                            <rdf:Description rdf:about="urn:swrl:var#ts"/>
+                                                            <rdf:Description rdf:about="urn:swrl:var#t0e"/>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DataRangeAtom"/>
+                                                                <swrl:dataRange>
+                                                                    <rdfs:Datatype>
+                                                                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                                                        <owl:withRestrictions rdf:parseType="Collection">
+                                                                            <rdf:Description>
+                                                                                <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</xsd:minInclusive>
+                                                                            </rdf:Description>
+                                                                            <rdf:Description>
+                                                                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</xsd:maxInclusive>
+                                                                            </rdf:Description>
+                                                                        </owl:withRestrictions>
+                                                                    </rdfs:Datatype>
+                                                                </swrl:dataRange>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#dt"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasEvent"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#e_coff_m"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#CoffeeMachine"/>
+                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#e_coff_m"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Mug"/>
+                                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#e_mug"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasEvent"/>
+                                                                                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                                                                                <swrl:argument2 rdf:resource="urn:swrl:var#e_mug"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#MakingCoffee"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasEvent"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#e_ket"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Kettle"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#e_ket"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasEvent"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#e_wat_fc"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#WaterFaucet"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#e_wat_fc"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasEvent"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl:var#e_st"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Stove"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#e_st"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#BoilingWater"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#Activity"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasEvent"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#e_sh"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ShakingURL"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#e_sh"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasEvent"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#e"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#ToothBrush"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasStartTime"/>
+                                                                <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                                                                <swrl:argument2 rdf:resource="urn:swrl:var#t1"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#hasEndTime"/>
+                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                                                                        <swrl:argument2 rdf:resource="urn:swrl:var#t2"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#subtract"/>
+                                                                                <swrl:arguments rdf:parseType="Collection">
+                                                                                    <rdf:Description rdf:about="urn:swrl:var#duration"/>
+                                                                                    <rdf:Description rdf:about="urn:swrl:var#t2"/>
+                                                                                    <rdf:Description rdf:about="urn:swrl:var#t1"/>
+                                                                                </swrl:arguments>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DataRangeAtom"/>
+                                                                                        <swrl:dataRange>
+                                                                                            <rdfs:Datatype>
+                                                                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                                                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                                                                    <rdf:Description>
+                                                                                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</xsd:minInclusive>
+                                                                                                    </rdf:Description>
+                                                                                                    <rdf:Description>
+                                                                                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</xsd:maxInclusive>
+                                                                                                    </rdf:Description>
+                                                                                                </owl:withRestrictions>
+                                                                                            </rdfs:Datatype>
+                                                                                        </swrl:dataRange>
+                                                                                        <swrl:argument1 rdf:resource="urn:swrl:var#duration"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/kian/ontologies/2022/0/act_ont_01#BrushingTeeth"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
